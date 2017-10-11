@@ -1,4 +1,4 @@
-Kotlin Node.js Template
-=======================
+Kotlin on Node.js
+=================
 
-This project aims to provide a template for anyone wanting to start writing a Kotlin project on Node.js.
+This project intends to be a bootstrap for [Kotlin](http://kotlinlang.org) development on Node.js.
