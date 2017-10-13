@@ -8,7 +8,7 @@ object DataService {
    val hello = fun(callback: dynamic): Unit {
     http.get("/hello").then({ res: dynamic ->
      callback(null, res.data)
-    }, { res:dynamic ->
+    }, { res: dynamic ->
      callback("Failed")
     })
    }
