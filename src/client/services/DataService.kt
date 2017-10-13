@@ -9,7 +9,7 @@ object DataService {
     http.get("/hello").then({ res: dynamic ->
      callback(null, res.data)
     }, { res:dynamic ->
-     callback("hello() failed")
+     callback("Failed")
     })
    }
    return json(Pair("hello", hello))
