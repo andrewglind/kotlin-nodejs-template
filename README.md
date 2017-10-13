@@ -9,7 +9,11 @@ I suggest you use [SDKMAN](http://sdkman.io) to manage the Kotlin install.
 
 To install SDKMAN and Kotlin:
 
-`curl -s "https://get.sdkman.io" | bash && sdk install kotlin`
+`curl -s "https://get.sdkman.io" | bash`
+
+open a new terminal:
+
+`sdk install kotlin`
 
 To build, issue the following commands:
 
