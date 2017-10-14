@@ -1,4 +1,3 @@
-var fs = require('fs');
 var gulp = require('gulp');
 var del = require('del');
 var exec = require('child_process').exec;
@@ -17,7 +16,7 @@ var build = function(tier, moduleKind) {
 }
 
 gulp.task('clean', function() {
- return del(['out', 'server.js', 'public/js/**/*']);
+ return del(['out', 'server.js', 'public/js/client.js']);
 });
 
 gulp.task('build:client', ['clean'], function() {
