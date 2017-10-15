@@ -9,10 +9,10 @@ external val angular: dynamic
 
 fun main(args: Array<String>) {
  val controllers = angular.module("controllers", js("[]"))
- controllers.controller("HelloController", HelloController.get())
+ controllers.controller("HelloController", helloControllerFactory())
 
  val services = angular.module("services", js("[]"))
- services.service("dataService", DataService.get())
+ services.service("dataService", dataServiceFactory())
 
  val app = angular.module("app", arrayOf("ngRoute", "services", "controllers"))
 
