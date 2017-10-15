@@ -15,10 +15,10 @@ fun HashMap<String, Any>.toJson(): Json {
 }
 
 fun main(args: Array<String>) {
- val controllers = angular.module("controllers", js("[]"))
+ val controllers = angular.module("controllers", arrayOfNulls<Any>(0))
  controllers.controller("HelloController", helloControllerFactory())
 
- val services = angular.module("services", js("[]"))
+ val services = angular.module("services", arrayOfNulls<Any>(0))
  services.service("dataService", dataServiceFactory())
 
  val app = angular.module("app", arrayOf("ngRoute", "services", "controllers"))
