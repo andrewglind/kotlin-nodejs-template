@@ -2,14 +2,8 @@ package client.controllers
 
 import client.services.DataService
 
-class HelloController {
- val scope: dynamic
- val dataService: DataService
-
- constructor(scope: dynamic, dataService: DataService) {
-  this.scope = scope
-  this.dataService = dataService
-
+class HelloController(val scope: dynamic, val dataService: DataService) {
+ fun hello() {
   dataService.hello({ err: dynamic, data: String ->
    if(err == null) {
     scope.message = data
@@ -19,5 +13,9 @@ class HelloController {
 }
 
 inline fun helloControllerFactory(): Array<Any> {
- return arrayOf("\$scope", "dataService", { scope: dynamic, dataService: DataService -> HelloController(scope, dataService) })
+ return arrayOf("\$scope", "dataService", { scope: dynamic, dataService: DataService ->
+  val helloController = HelloController(scope, dataService)
+  helloController.hello()
+  helloController
+ })
 }
